@@ -1,14 +1,4 @@
-iPXE README File
-
-Quick start guide:
-
-   cd src
-   make
-
-For any more detailed instructions, see http://ipxe.org
-
-
-Build uefi bootable ipxe iso image.
+Build uefi bootable ipxe iso image with console.
 
     `cd src
      make bin/ipxe.lkrn bin-x86_64-efi/ipxe.efi
