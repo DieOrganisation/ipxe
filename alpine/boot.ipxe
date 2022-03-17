@@ -1,0 +1,10 @@
+#!ipxe
+set base-url http://192.168.0.3/alpine/
+kernel ${base-url}vmlinuz-lts apkovl=${base-url}config-lts ip=dhcp ssh_key=${base-url}sshkeys.pub modloop=${base-url}modloop-lts modules=loop,squashfs,sd-mod,usb-storage alpine_repo=http://nl.alpinelinux.org/alpine/latest-stable/main/
+initrd ${base-url}initramfs-lts
+imgstat
+echo wait
+sleep 10
+echo boot
+boot
+EOF

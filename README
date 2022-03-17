@@ -6,3 +6,13 @@ Quick start guide:
    make
 
 For any more detailed instructions, see http://ipxe.org
+
+
+Build uefi bootable ipxe iso image.
+
+    `cd src
+     make bin/ipxe.lkrn bin-x86_64-efi/ipxe.efi
+     ./util/genfsimg -o ipxe.iso bin/ipxe.lkrn bin-x86_64-efi/ipxe.efi
+     `
+
+
