@@ -1,0 +1,8 @@
+#!ipxe
+:start
+set uri http://10.0.2.2:5001/static/ipxe/boot.ipxe
+echo -n configure boot uri: && read uri
+dhcp
+echo Loading ipxe boot cfg from ${uri}
+chain ${uri} || prompt ERROR Press key to continue
+goto start

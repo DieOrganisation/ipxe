@@ -1,0 +1,4 @@
+#!ipxe
+dhcp
+chain http://10.0.2.2:5001/getipxe?mac=${net0/mac}
+
